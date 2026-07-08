@@ -533,17 +533,17 @@
   <!-- ============ CONTATO ============ -->
   <section id="contato" style="background: var(--dark-bg); color: var(--text-light); padding: clamp(70px, 8vw, 120px) 0;">
     <div class="container">
-      <div class="contato-grid" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(40px, 6vw, 80px); align-items: start;">
+      <div style="max-width: 600px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
         <div>
           <div style="color: #E3B884; font-size: 12.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 16px;">Fale com a Refolar</div>
           <h2 style="font-family: var(--font-sora); font-weight: 600; font-size: clamp(30px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 22px; text-wrap: balance;">Solicite seu orçamento agora mesmo.</h2>
-          <p style="color: rgba(251, 250, 247, 0.66); font-size: 17px; line-height: 1.6; max-width: 480px; margin-bottom: 40px;">
-            Diga-nos quais reparos ou melhorias sua loja necessita. Responderemos rapidamente para programar a visita da nossa equipe.
+          <p style="color: rgba(251, 250, 247, 0.66); font-size: 17px; line-height: 1.6; max-width: 520px; margin: 0 auto 40px;">
+            Entre em contato pelos nossos canais de atendimento direto. Responderemos rapidamente para programar a visita da nossa equipe.
           </p>
           
-          <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; flex-direction: column; gap: 14px; width: 100%;">
             <!-- Link WhatsApp -->
-            <a href="https://wa.me/5541984435360" class="rf-cta" style="display: flex; align-items: center; justify-content: flex-start; gap: 16px; background: rgba(251, 250, 247, 0.04); border: 1px solid rgba(251, 250, 247, 0.14); border-radius: 14px; padding: 18px 22px; text-align: left; width: 100%;">
+            <a href="https://wa.me/5541984435360" target="_blank" class="rf-cta" style="display: flex; align-items: center; justify-content: flex-start; gap: 16px; background: rgba(251, 250, 247, 0.04); border: 1px solid rgba(251, 250, 247, 0.14); border-radius: 14px; padding: 18px 22px; text-align: left; width: 100%;">
               <span style="display: inline-flex; width: 44px; height: 44px; border-radius: 11px; align-items: center; justify-content: center; background: var(--accent); color: #fff; flex: none;"><i data-lucide="message-circle"></i></span>
               <span>
                 <span style="display: block; color: rgba(251, 250, 247, 0.5); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px;">Conversar via WhatsApp</span>
@@ -570,40 +570,6 @@
             </a>
           </div>
         </div>
-
-        <!-- Formulário de Contato -->
-        <div style="background: rgba(251, 250, 247, 0.02); border: 1px solid rgba(251, 250, 247, 0.08); border-radius: 20px; padding: 40px clamp(20px, 4vw, 48px); position: relative; overflow: hidden; width: 100%;">
-          <div class="success-alert" id="successMsg">
-            <i data-lucide="check-circle" style="color: #7ECFB4;"></i>
-            <span>Orçamento solicitado com sucesso! Retornaremos o mais rápido possível.</span>
-          </div>
-
-          <form id="refolarForm" onsubmit="handleFormSubmit(event)">
-            <div class="form-group">
-              <label class="form-label" for="formName">Nome Completo *</label>
-              <input type="text" id="formName" class="form-input" placeholder="Seu nome" required autocomplete="name">
-            </div>
-            
-            <div class="form-group">
-              <label class="form-label" for="formEmail">E-mail de Contato *</label>
-              <input type="email" id="formEmail" class="form-input" placeholder="seu-email@dominio.com" required autocomplete="email">
-            </div>
-            
-            <div class="form-group">
-              <label class="form-label" for="formSubject">Loja / Shopping / Cidade</label>
-              <input type="text" id="formSubject" class="form-input" placeholder="Ex: Loja Swarovski - ParkShopping - Curitiba">
-            </div>
-            
-            <div class="form-group" style="margin-bottom: 28px;">
-              <label class="form-label" for="formMsg">Descreva sua Necessidade *</label>
-              <textarea id="formMsg" class="form-textarea" placeholder="Descreva os serviços necessários..." required></textarea>
-            </div>
-            
-            <button type="submit" class="rf-cta rf-cta-primary" style="width: 100%; padding: 16px; font-size: 16px;">
-              Enviar Solicitação <i data-lucide="send"></i>
-            </button>
-          </form>
-        </div>
       </div>
     </div>
   </section>
@@ -623,23 +589,6 @@
   <script>
     // Inicializar ícones
     lucide.createIcons();
-
-    // Lógica do Formulário de Contato
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('formName').value;
-      const email = document.getElementById('formEmail').value;
-      const subject = document.getElementById('formSubject').value;
-      const msg = document.getElementById('formMsg').value;
-      
-      // Mostrar feedback de sucesso
-      document.getElementById('refolarForm').style.display = 'none';
-      const successMsg = document.getElementById('successMsg');
-      successMsg.style.display = 'flex';
-
-      console.log("Formulário enviado com sucesso:", {name, email, subject, msg});
-    }
   </script>
 </body>
 </html>
