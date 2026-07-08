@@ -304,63 +304,24 @@
     </nav>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section id="top" style="position:relative;min-height:100vh;display:flex;align-items:center;background:#17130E;overflow:hidden;">
-    <!-- backdrop image placeholder -->
-    <div style="position:absolute;inset:0;background:
-        radial-gradient(120% 120% at 78% 30%, rgba(192,129,63,.32), transparent 55%),
-        repeating-linear-gradient(135deg, #221b12 0 3px, #1c160f 3px 26px),
-        linear-gradient(180deg,#1a140d,#100c07);"></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(90deg,#17130E 8%,rgba(23,19,14,.72) 46%,rgba(23,19,14,.18) 100%);"></div>
+  <!-- ============ HERO (CAPA) ============ -->
+  <section id="top" style="position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; background: url('assets/hero_bg.jpg') no-repeat center center; background-size: cover; overflow: hidden; padding: 140px 20px 80px;">
+    <!-- Overlay Escuro para dar contraste ao texto -->
+    <div style="position: absolute; inset: 0; background: rgba(1, 1, 1, 0.85); z-index: 1;"></div>
 
-    <div style="position:relative;z-index:5;width:100%;max-width:1280px;margin:0 auto;padding:130px clamp(20px,5vw,72px) 70px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;">
-      <div style="animation:rf-rise .8s cubic-bezier(.2,.7,.2,1) both;">
-        <div style="display:inline-flex;align-items:center;gap:10px;padding:7px 15px;border:1px solid rgba(227,184,124,.4);border-radius:100px;margin-bottom:28px;">
-          <span style="width:6px;height:6px;border-radius:50%;background:#E3B884;box-shadow:0 0 12px #E3B884;"></span>
-          <span style="color:#E3B884;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;">Manutenção para lojas · Curitiba–PR</span>
-        </div>
-        <h1 style="font-family:'Sora',sans-serif;color:#FBFAF7;font-weight:600;font-size:clamp(40px,5.6vw,72px);line-height:1.02;letter-spacing:-.02em;margin-bottom:24px;text-wrap:balance;">
-          As manutenções que as<br><span style="color: rgb(227, 184, 132);">grandes marcas</span> confiam dentro do shopping.
-        </h1>
-        <p style="color:rgba(251,250,247,.72);font-size:clamp(16px,1.4vw,19px);line-height:1.65;max-width:540px;margin-bottom:38px;">
-          Reparos de alto padrão, projetos personalizados e vitrines impecáveis. Uma equipe qualificada que entende a rotina do varejo de shopping — do prazo curto ao acabamento perfeito.
-        </p>
-        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px;">
-          <a href="#contato" class="rf-cta rf-cta-primary" style="display:inline-flex;align-items:center;gap:9px;background:var(--accent,#C0813F);color:#fff;font-weight:600;font-size:15.5px;padding:15px 28px;border-radius:100px;">
-            Solicitar orçamento <i data-lucide="arrow-right"></i>
-          </a>
-          <a href="#servicos" class="rf-cta" style="display:inline-flex;align-items:center;gap:9px;color:#FBFAF7;font-weight:600;font-size:15.5px;padding:15px 26px;border-radius:100px;border:1px solid rgba(251,250,247,.28);">
-            Ver serviços
-          </a>
-        </div>
-        <div style="display:flex;gap:clamp(24px,4vw,56px);flex-wrap:wrap;">
-          <div>
-            <div style="font-family:'Sora',sans-serif;color:#FBFAF7;font-size:30px;font-weight:600;">8+</div>
-            <div style="color:rgba(251,250,247,.55);font-size:13px;font-weight:500;letter-spacing:.02em;">especialidades sob um só contrato</div>
-          </div>
-          <div>
-            <div style="font-family:'Sora',sans-serif;color:#FBFAF7;font-size:30px;font-weight:600;">CREA</div>
-            <div style="color:rgba(251,250,247,.55);font-size:13px;font-weight:500;letter-spacing:.02em;">responsável técnico credenciado</div>
-          </div>
-          <div>
-            <div style="font-family:'Sora',sans-serif;color:#FBFAF7;font-size:30px;font-weight:600;">100%</div>
-            <div style="color:rgba(251,250,247,.55);font-size:13px;font-weight:500;letter-spacing:.02em;">material com garantia</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="animation:rf-rise 1s .15s cubic-bezier(.2,.7,.2,1) both;">
-        <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(227,184,124,.28);box-shadow:0 40px 90px -40px rgba(0,0,0,.7);aspect-ratio:4/5;
-             background:repeating-linear-gradient(135deg,#241c13 0 2px,#1e1710 2px 22px);">
-          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
-            <i data-lucide="store" style="width:34px;height:34px;color:rgba(227,184,124,.7);"></i>
-            <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;color:rgba(227,184,124,.62);font-size:12px;letter-spacing:.05em;text-align:center;padding:0 20px;">foto — vitrine de loja em shopping</span>
-          </div>
-          <div style="position:absolute;left:18px;bottom:18px;right:18px;background:rgba(16,12,7,.72);backdrop-filter:blur(6px);border:1px solid rgba(227,184,124,.22);border-radius:12px;padding:14px 16px;">
-            <div style="color:#E3B884;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px;">Vitrines para shopping</div>
-            <div style="color:rgba(251,250,247,.8);font-size:13.5px;line-height:1.4;">Reparos de alto padrão, do projeto personalizado ao acabamento.</div>
-          </div>
-        </div>
+    <div class="container" style="position: relative; z-index: 5; text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px;">
+      <h1 style="font-family: var(--font-sora); color: var(--text-light); font-weight: 600; font-size: clamp(32px, 5vw, 54px); line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance;">
+        Manutenções Preventivas e Corretivas para lojas em Shopping.
+      </h1>
+      
+      <p style="color: rgba(251, 250, 247, 0.9); font-family: var(--font-manrope); font-size: clamp(15px, 1.2vw, 18px); line-height: 1.65; max-width: 720px; text-wrap: balance;">
+        Há mais de 15 anos, oferecemos manutenção preventiva e corretiva especializada para lojistas de shopping. Nossa equipe qualificada realiza serviços elétricos, ar-condicionado, pintura, marcenaria, soldas e fornece materiais com garantia de qualidade e segurança.
+      </p>
+      
+      <div style="margin-top: 12px;">
+        <a href="#servicos" class="rf-cta rf-cta-primary" style="padding: 15px 36px; font-size: 16px;">
+          Saiba Mais
+        </a>
       </div>
     </div>
   </section>
