@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -122,6 +122,12 @@
     @keyframes rf-rise {
       from { opacity: 0; transform: translateY(18px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(227, 184, 124, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(227, 184, 124, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(227, 184, 124, 0); }
     }
 
     .rf-marquee-container {
@@ -305,24 +311,40 @@
   </header>
 
   <!-- ============ HERO (CAPA) ============ -->
-  <section id="top" style="position: relative; min-height: 80vh; display: flex; align-items: center; justify-content: center; background: url('assets/hero_bg.jpg') no-repeat center center; background-size: cover; overflow: hidden; padding: 140px 20px 80px;">
-    <!-- Overlay Escuro para dar contraste ao texto -->
-    <div style="position: absolute; inset: 0; background: rgba(1, 1, 1, 0.85); z-index: 1;"></div>
+  <section id="top" style="position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; background: url('assets/hero_bg.jpg') no-repeat center center; background-size: cover; overflow: hidden; padding: 160px 20px 80px;">
+    <!-- Overlay Escuro Gradiente -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(16, 12, 7, 0.65) 0%, rgba(10, 8, 5, 0.92) 100%); z-index: 1;"></div>
 
-    <div class="container" style="position: relative; z-index: 5; text-align: center; max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 24px;">
-      <h1 style="font-family: var(--font-sora); color: var(--text-light); font-weight: 600; font-size: clamp(32px, 5vw, 54px); line-height: 1.15; letter-spacing: -0.01em; text-wrap: balance;">
-        Manutenções Preventivas e Corretivas para lojas em Shopping.
-      </h1>
+    <!-- Elementos Flutuantes de Luz no Fundo para dar profundidade -->
+    <div style="position: absolute; top: 20%; left: 15%; width: 250px; height: 250px; background: rgba(192, 129, 63, 0.15); filter: blur(90px); border-radius: 50%; pointer-events: none; z-index: 2;"></div>
+    <div style="position: absolute; bottom: 10%; right: 10%; width: 300px; height: 300px; background: rgba(227, 184, 124, 0.1); filter: blur(100px); border-radius: 50%; pointer-events: none; z-index: 2;"></div>
+
+    <div class="container" style="position: relative; z-index: 5; text-align: center; max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
       
-      <p style="color: rgba(251, 250, 247, 0.9); font-family: var(--font-manrope); font-size: clamp(15px, 1.2vw, 18px); line-height: 1.65; max-width: 720px; text-wrap: balance;">
-        Há mais de 15 anos, oferecemos manutenção preventiva e corretiva especializada para lojistas de shopping. Nossa equipe qualificada realiza serviços elétricos, ar-condicionado, pintura, marcenaria, soldas e fornece materiais com garantia de qualidade e segurança.
-      </p>
-      
-      <div style="margin-top: 12px;">
-        <a href="#servicos" class="rf-cta rf-cta-primary" style="padding: 15px 36px; font-size: 16px;">
-          Saiba Mais
-        </a>
+      <!-- Caixa Glassmorphism Premium -->
+      <div style="background: rgba(23, 19, 14, 0.68); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(227, 184, 124, 0.18); border-radius: 28px; padding: 48px clamp(20px, 6vw, 64px); box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6); animation: rf-rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both; width: 100%;">
+        
+        <!-- Badge premium -->
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(227, 184, 124, 0.08); border: 1px solid rgba(227, 184, 124, 0.25); border-radius: 100px; margin-bottom: 24px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #E3B884; box-shadow: 0 0 10px #E3B884; animation: pulse 2s infinite;"></span>
+          <span style="color: #E3B884; font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;">Manutenção de Alto Padrão</span>
+        </div>
+
+        <h1 style="font-family: var(--font-sora); color: #FBFAF7; font-weight: 700; font-size: clamp(34px, 5.2vw, 56px); line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; margin-bottom: 24px;">
+          Manutenções <span style="background: linear-gradient(135deg, #FBFAF7 20%, #E3B884 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Preventivas & Corretivas</span> para lojas em Shopping.
+        </h1>
+        
+        <p style="color: rgba(251, 250, 247, 0.82); font-family: var(--font-manrope); font-size: clamp(15px, 1.2vw, 17.5px); line-height: 1.65; max-width: 680px; margin: 0 auto 36px; text-wrap: balance;">
+          Há mais de 15 anos, oferecemos manutenção preventiva e corretiva especializada para lojistas de shopping. Nossa equipe qualificada realiza serviços elétricos, ar-condicionado, pintura, marcenaria, soldas e fornece materiais com garantia de qualidade e segurança.
+        </p>
+        
+        <div style="display: flex; justify-content: center; gap: 16px;">
+          <a href="#servicos" class="rf-cta rf-cta-primary" style="padding: 16px 38px; font-size: 15.5px; gap: 8px;">
+            Saiba Mais <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+          </a>
+        </div>
       </div>
+      
     </div>
   </section>
 
