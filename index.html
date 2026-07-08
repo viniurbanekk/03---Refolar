@@ -146,8 +146,9 @@
     }
 
     .rf-svc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 24px;
     }
 
@@ -156,6 +157,9 @@
       border: 1px solid var(--border-color);
       border-radius: 18px;
       padding: 36px 30px;
+      flex: 1 1 280px;
+      max-width: 380px;
+      box-sizing: border-box;
       transition: transform 0.35s cubic-bezier(.2, .7, .2, 1), border-color 0.35s, box-shadow 0.35s;
     }
 
